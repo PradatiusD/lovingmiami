@@ -24,7 +24,7 @@ h1, h3 {
 	font-family: 'LondrinaSolid', $helvetica;
 }
 
-h2, a {
+h2, .cta a {
 	font-family:'MathleteSkinny', $helvetica;
 }
 
@@ -36,9 +36,11 @@ body {
 img.logo {
 	display:block;
 	margin:0 auto;
-	background: rgba(255, 255, 255, 0.61);
+	background: rgba(255, 255, 255, 0.85);
 	border-radius:100%;
 	padding:1em;
+	position:relative;
+	z-index:100;
 }
 
 p.lead {
@@ -48,6 +50,49 @@ p.lead {
 
 ul {
 	margin-left:1.5em;
+}
+
+.instagram {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:0;
+
+    .instagram-placeholder {
+    	display: inline-block;
+		width: 16.5%;
+		img {
+			width:100%;
+			@include transition(all 0.8s);
+			&:hover {
+				opacity: 0.66;
+			}
+		}
+	    // Resizing into 4 columns 
+	    @media screen and (min-width:321px) and (max-width:720px) {
+	    	width:24.8%;	
+	    }
+	    @media screen and (max-width:320px) {
+	    	width:33.33%;	
+	    }
+
+    }
+	// Hack to show first 24 images
+	.instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder {
+		display:none;
+	}
+}
+
+#googleMAP {
+	border-radius: 1em;
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+img.feature-person {
+	border-radius: 0.5em;
+	box-shadow: 0px 7px 8px -8px #000;
 }
 
 h4 {
@@ -61,12 +106,16 @@ h4 {
 }
 
 .section-block {
-	background:rgba(255, 255, 255, 0.65);
+	background:rgba(255, 255, 255, 0.80);
 	padding:2em;
+	position:relative;
 }
 
 .red {
-	background:$deep-red;
+	background:rgba(194, 67, 64, 0.86);
+	position:relative;
+	z-index:100;
+	margin:1em auto 0em auto;
 	h1, h2, h3 {
 		color:$light-red;
 		text-align: center;
