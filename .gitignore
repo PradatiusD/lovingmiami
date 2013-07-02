@@ -1,0 +1,4 @@
+*.xml
+*/*.xml
+*/*/*.xml
+css/*.sass-cache

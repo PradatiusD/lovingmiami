@@ -1,0 +1,102 @@
+@import "normalize.scss",
+"foundation.scss",
+"bourbon/bourbon";
+
+
+@include font-face('Entypo', 'entypo/entypo');
+
+@include font-face('Entypo-social', 'entypo-social/entypo-social');
+
+@include font-face('LondrinaSolid', 'fonts/LondrinaSolid-Regular-webfont');
+
+@include font-face('MathleteSkinny', 'fonts/Mathlete-Skinny-webfont');
+
+// Color variables
+$deepest-red:#C62A29;
+$deep-red:#c24340;
+$light-red:#e7b5b2;
+
+.entypo-social {
+	font-family:'Entypo-social';
+}
+
+h1, h3 {
+	font-family: 'LondrinaSolid', $helvetica;
+}
+
+h2, a {
+	font-family:'MathleteSkinny', $helvetica;
+}
+
+body {
+	background-image:url(http://subtlepatterns.com/patterns/gplaypattern.png);
+
+}
+
+img.logo {
+	display:block;
+	margin:0 auto;
+	background: rgba(255, 255, 255, 0.61);
+	border-radius:100%;
+	padding:1em;
+}
+
+p.lead {
+	font-family: 'LondrinaSolid', $helvetica;
+	color:#504b4b;
+}
+
+ul {
+	margin-left:1.5em;
+}
+
+h4 {
+	font-family:'MathleteSkinny', $helvetica;
+	font-size:3em;
+	margin-bottom:0.125em;
+	padding-bottom:0.125em;
+	line-height:1em;
+	border-bottom:2px solid $light-red;
+	text-align:center;
+}
+
+.section-block {
+	background:rgba(255, 255, 255, 0.65);
+	padding:2em;
+}
+
+.red {
+	background:$deep-red;
+	h1, h2, h3 {
+		color:$light-red;
+		text-align: center;
+		span {
+			color: white;
+		}
+	}
+	h1 {
+	    color: white;
+	    font-size: 4em;
+	    margin-bottom: 0.25em; 
+	    letter-spacing: 1px;
+	}
+}
+
+.cta {
+	a {
+		display: block;
+		text-align: center;
+		font-size: 2.3em;
+		padding: 0.5em;
+		margin: 1em auto;
+		width:280px;
+		border-radius: 0.25em;
+		background:$deep-red;
+		box-shadow: 1px 3px $light-red;
+		color:white;
+		@include transition (background 0.5s);
+		&:hover {
+			background:$deepest-red;
+		}
+	}
+}
