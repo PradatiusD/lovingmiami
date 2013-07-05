@@ -4735,7 +4735,6 @@ h4 {
     background: #c62a29; }
 
 .subMenu.smint {
-  position: relative;
   z-index: 1000;
   text-align: center;
   width: 100%;

@@ -9,7 +9,8 @@ http://www.outyear.co.uk/smint/
 If you like Smint, or have suggestions on how it could be improved, send me a tweet @rabmyself
 
 */
-(function(){
+jQuery(document).ready(function($){
+	(function(){
 
 	
 	$.fn.smint = function( options ) {
@@ -35,7 +36,8 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 			///////////////////////////////////
 
 			// get initial top offset for the menu 
-			var stickyTop = $('.smint').offset().top;	
+			var stickyTop = $('.smint').offset().top;
+			console.log("Initial offset is" + stickyTop)	
 
 			// check position and make sticky if needed
 			var stickyMenu = function(){
@@ -90,3 +92,6 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 	}
 
 })();
+
+})
+
