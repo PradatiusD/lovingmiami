@@ -149,3 +149,24 @@ h4 {
 		}
 	}
 }
+
+.subMenu.smint {
+	position:relative;
+	z-index:1000;
+	text-align: center;
+	width: 100%;
+	background:rgba(194, 67, 64, 0.86);
+	padding:1em;
+	.inner {
+		a {
+			color:white;
+			padding: 0 1em;
+			font-weight: 200;
+			font-size: 1.2em;
+			@include transition (all 0.5s);
+			&:hover {
+				color:$light-red;
+			}
+		}	
+	}
+}

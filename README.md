@@ -9,3 +9,4 @@ I am using the following fonts under the Creative Commons Attribution license:
 
 I am also using the following plugins:
 * Instagram by @johnnyaboh (http://potomak.github.io/jquery-instagram/)
+* SMINT by @rabmyself (http://www.outyear.co.uk/smint/)

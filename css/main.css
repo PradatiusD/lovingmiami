@@ -4733,3 +4733,21 @@ h4 {
   transition: background 0.5s; }
   .cta a:hover {
     background: #c62a29; }
+
+.subMenu.smint {
+  position: relative;
+  z-index: 1000;
+  text-align: center;
+  width: 100%;
+  background: rgba(194, 67, 64, 0.86);
+  padding: 1em; }
+  .subMenu.smint .inner a {
+    color: white;
+    padding: 0 1em;
+    font-weight: 200;
+    font-size: 1.2em;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s; }
+    .subMenu.smint .inner a:hover {
+      color: #e7b5b2; }
