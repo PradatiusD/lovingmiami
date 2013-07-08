@@ -4734,13 +4734,13 @@ h4 {
   .cta a:hover {
     background: #c62a29; }
 
-.subMenu.smint {
+.subMenu {
   z-index: 1000;
   text-align: center;
   width: 100%;
   background: rgba(194, 67, 64, 0.86);
   padding: 1em; }
-  .subMenu.smint .inner a {
+  .subMenu .inner a {
     color: white;
     padding: 0 1em;
     font-weight: 200;
@@ -4748,5 +4748,41 @@ h4 {
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s; }
-    .subMenu.smint .inner a:hover {
+    .subMenu .inner a:hover {
       color: #e7b5b2; }
+
+.sponsors span {
+  width: 128px;
+  height: 150px;
+  background-image: url("../img/sponsors.png");
+  display: inline-block;
+  margin: 0.5em 1em; }
+.sponsors span.logo1 {
+  width: 195px;
+  background-position: -137px 0px; }
+.sponsors span.logo2 {
+  width: 120px;
+  background-position: -340px 0px; }
+.sponsors span.logo3 {
+  width: 122px;
+  background-position: -491px 0px; }
+.sponsors span.logo4 {
+  width: 98px;
+  background-position: -627px 0px; }
+.sponsors span.logo5 {
+  width: 343px;
+  background-position: -731px 0px; }
+.sponsors img.pd {
+  height: auto;
+  width: 130px;
+  margin: 0.5em 1em;
+  vertical-align: top;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s; }
+  .sponsors img.pd:hover {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }

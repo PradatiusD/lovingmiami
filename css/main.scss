@@ -150,7 +150,7 @@ h4 {
 	}
 }
 
-.subMenu.smint {
+.subMenu {
 	z-index:1000;
 	text-align: center;
 	width: 100%;
@@ -167,5 +167,44 @@ h4 {
 				color:$light-red;
 			}
 		}	
+	}
+}
+.sponsors {
+	span {
+		width:128px;
+		height:150px;
+		background-image: url('../img/sponsors.png');
+		display: inline-block;
+		margin: 0.5em 1em;
+	}
+	span.logo1 {
+		width:195px;
+		background-position:-137px 0px;
+	}
+	span.logo2 {
+		width:120px;
+		background-position:-340px 0px;
+	}
+	span.logo3 {
+		width:122px;
+		background-position:-491px 0px;
+	}
+	span.logo4 {
+		width:98px;
+		background-position:-627px 0px;
+	}
+	span.logo5 {
+		width:343px;
+		background-position: -731px 0px;
+	}
+	img.pd {
+		height: auto;
+		width: 130px;
+		margin: 0.5em 1em;
+		vertical-align: top;
+		@include transition (all 1s);
+		&:hover {
+			@include transform (rotate(180deg))
+		}
 	}
 }
