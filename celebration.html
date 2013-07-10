@@ -20,9 +20,11 @@
         <![endif]-->
 
 	<section class="row">
-		<div class="small-12 large-6 large-centered columns celebration">
+		<div class="small-12 large-6 large-centered columns celebration cta">
 			<img class="logo" src="img/loving-miami-logo.png" alt="">
 			<h1>Check out what others are also posting on instagram with the hashtag #lovingdaymia and #mixedinmia!</h1>
+			<a href="Javascript:void(0)" id="past" >Past Photos</a>
+			<a href="Javascript:void(0)" id="live" >Live Stream</a>
 			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://lovingdaymiami.com" data-text="Celebrating Loving vs. Virginia, the 1964 Supreme Court case that legalized interracial marriage, at #lovingdaymia" data-size="large">Tweet</a>			
 		</div>
 	</section>
@@ -41,10 +43,26 @@
 <script src="js/feed.js"></script>
 <script>
 	jQuery(document).ready(function($){
-		instafeed("funny", ".lovingdayfeed", 10, 5);
-		// Alternate calls to have mixed feed
-		setTimeout(function(){
-			instafeed("rock", ".lovingdayfeed", 10, 5);
-		},2500)
+		$('#live').click(function(){
+			instafeed("lovingdaymia", ".lovingdayfeed", 10, 2.5);
+			// Alternate calls to have mixed feed
+			setTimeout(function(){
+				instafeed("mixedinmia", ".lovingdayfeed", 10, 2.5);
+			},2500)
+		})
+		$('#past').click(function(){
+            $(".lovingdayfeed").instagram({
+                hash: 'lovingdaymia', 
+                clientId: 'fc195c47de4b4f57a069e632e6ef96b8',
+                show : 15,
+                image_size : 'standard_resolution'
+            });
+             $(".lovingdayfeed").instagram({
+                hash: 'lovingdaymia', 
+                clientId: 'fc195c47de4b4f57a069e632e6ef96b8',
+                show : 15,
+                image_size : 'standard_resolution'
+            });
+		})
 	})
 </script>

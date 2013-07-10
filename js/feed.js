@@ -17,7 +17,7 @@ function instafeed(hashtag, target, pictureRequests, timeBetweenCall) {
 				        });
 
 	    			pictureCount++;
-	    			console.log("Instagram feed for+ "+hashtag+" is on call "+pictureCount);
+	    			console.log("Instagram feed for the hashtag #"+hashtag+" is on call "+pictureCount);
 
 	    			// Now make sure there are no duplicates by adding the instagram ids to the array
 	    			// if there is a duplicate, then delete one of them
