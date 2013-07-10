@@ -4684,8 +4684,22 @@ ul {
 .lovingdayfeed .instagram-placeholder {
   display: inline-block; }
 
+.lovingdayprojector {
+  position: absolute;
+  top: 0;
+  z-index: 0; }
+  .lovingdayprojector .instagram-placeholder {
+    display: inline-block;
+    width: 24.5%; }
+
 .celebration h1 {
-  text-align: center; }
+  text-align: center;
+  position: relative;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.79);
+  color: #c24340;
+  padding: 1em;
+  border-radius: 1em; }
 
 #googleMAP {
   border-radius: 1em;
