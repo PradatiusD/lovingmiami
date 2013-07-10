@@ -22,69 +22,23 @@
 	<section class="row">
 		<div class="small-12 large-centered columns celebration projector">
 			<img class="logo" src="img/loving-miami-logo.png" alt="">
-			<h1>Check out what others are also posting on instagram with the hashtag #lovingdaymia!</h1>		
+			<h1>Check out what others are also posting on instagram with the hashtag #lovingdaymia and #mixedinmia!</h1>		
 		</div>
 	</section>
 	<div class="lovingdayprojector"></div>
-
-	
-</body>
+	</body>
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery.js"><\/script>')</script>
 <script src="js/jquery.instagram.js"></script>
+<script src="js/feed.js"></script>
 <script>
-    jQuery(document).ready(function($){
-    	var timerId = 0;
-    	var pictureCount = 0;
-    	timerId = setInterval(function(){
-		    		if (pictureCount<10){
-		    			// Show instagram feed 
-		    	            $(".lovingdayprojector").instagram({
-				                hash: 'funny', 
-				                clientId: 'fc195c47de4b4f57a069e632e6ef96b8',
-				                show : 1,
-				                image_size : 'standard_resolution' // Image size to display. Choose one between 'low_resolution', 'thumbnail' or 'standard_resolution'.
-					        });
-
-		    			pictureCount++;
-		    			console.log("Instagram feed is on call "+pictureCount)
-
-		    			// Now make sure there are no duplicates by adding the instagram ids to the array
-		    			// if there is a duplicate, then delete one of them
-		    			
-		    			var numberofImages = $('.instagram-placeholder').length;
-		    			var placeholderId = [];
-		    			for (var i = 0; i < numberofImages-1; i++) {
-		    				var tempid = $('.instagram-placeholder').eq(i).attr('id');
-		    				placeholderId.push(tempid)
-		    			};
-
-		    			// Now sort the array and check if the next index is same as current and add those
-		    			// to the duplicate array
-		    			var sorted_placeholderId = placeholderId.sort()
-		    			var duplicates = [];
-		    			for (var i = 0; i < numberofImages-1; i++) {
-						    if (sorted_placeholderId[i + 1] == sorted_placeholderId[i]) {
-						        duplicates.push(sorted_placeholderId[i]);
-						    }
-						}
-
-		    			// Now do a for loop that eliminates the first id of a duplicated instagram placeh-
-		    			// er.
-
-		    			for (var i = 0; i < duplicates.length; i++) {
-		    				$("#"+duplicates[i]).remove();
-		    			};
-
-		    			// Now empty the main arrays for the next interval call
-		    			placeholderId = [];
-		    			duplicates = [];
-
-		    		} else {
-		    			clearInterval(timerId);
-		    		}    	            
-	    		},500)
-    })
+	jQuery(document).ready(function($){
+		instafeed("beach", ".lovingdayprojector", 10, 5);
+		// Alternate this with mixedinmia feed
+		setTimeout(function(){
+			instafeed("rock", ".lovingdayprojector", 10, 5);
+		},2500)
+	})
 </script>
