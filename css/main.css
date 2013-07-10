@@ -4677,6 +4677,16 @@ ul {
   .instagram .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder + .instagram-placeholder {
     display: none; }
 
+.twitter-share-button.twitter-count-horizontal {
+  display: block;
+  margin: 1em auto; }
+
+.lovingdayfeed .instagram-placeholder {
+  display: inline-block; }
+
+.celebration h1 {
+  text-align: center; }
+
 #googleMAP {
   border-radius: 1em;
   display: block;
