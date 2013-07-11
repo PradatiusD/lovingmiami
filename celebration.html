@@ -20,17 +20,22 @@
         <![endif]-->
 
 	<section class="row">
-		<div class="small-12 large-6 large-centered columns celebration cta">
+		<div class="small-12 large-6 large-centered columns celebration">
 			<img class="logo" src="img/loving-miami-logo.png" alt="">
-			<h1>Check out what others are also posting on instagram with the hashtag #lovingdaymia and #mixedinmia!</h1>
-			<a href="Javascript:void(0)" id="past" >Past Photos</a>
-			<a href="Javascript:void(0)" id="live" >Live Stream</a>
-			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://lovingdaymiami.com" data-text="Celebrating Loving vs. Virginia, the 1964 Supreme Court case that legalized interracial marriage, at #lovingdaymia" data-size="large">Tweet</a>			
+			<h1 style="font-size:2em">Check out what others are also posting on instagram with the hashtag #lovingdaymia and #mixedinmiami!</h1>
+            <p>The art exhibit, Mixed in Miami, is our remix of the <a href="http://seaweedproductions.com/the-hapa-project/">Hapa Project</a>, a multiracial identity project created by artist Kip Fulbeck. The exhibit will showcase portraits of individuals who identify as multiracial, interracial couples, and blended families.</p>
+            <p>You are invited to share your own portraits through Instagram by tagging photos as #mixedinmiami or #lovingdaymia. Tagged photos will be broadcasted live stream at the event <strong>on Thursday, July 11, 2013.</strong></p>
+           <div class="lovingdayfeed"></div>
 		</div>
 	</section>
 	<section class="row">
 		<div class="small-12 large-6 large-centered columns">
-			<div class="lovingdayfeed"></div>
+            <h3 class="information" style="display:none">Images are loading.  Please wait.</h3>
+            <div class="cta">
+                <a href="Javascript:void(0)" id="past" >Past Photos</a>
+                <a href="Javascript:void(0)" id="live" >Live Stream</a>
+            </div>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://lovingdaymiami.com" data-text="Celebrating Loving vs. Virginia, the 1964 Supreme Court case that legalized interracial marriage, at #lovingdaymia" data-size="large">Tweet</a>            
 		</div>
 	</section>
 	
@@ -47,7 +52,7 @@
 			instafeed("lovingdaymia", ".lovingdayfeed", 10, 2.5);
 			// Alternate calls to have mixed feed
 			setTimeout(function(){
-				instafeed("mixedinmia", ".lovingdayfeed", 10, 2.5);
+				instafeed("mixedinmiami", ".lovingdayfeed", 10, 2.5);
 			},2500)
 		})
 		$('#past').click(function(){
@@ -58,11 +63,16 @@
                 image_size : 'standard_resolution'
             });
              $(".lovingdayfeed").instagram({
-                hash: 'lovingdaymia', 
+                hash: 'mixedinmiami', 
                 clientId: 'fc195c47de4b4f57a069e632e6ef96b8',
                 show : 15,
                 image_size : 'standard_resolution'
             });
+            $('.information').fadeIn('fast',function(){
+                setTimeout(function(){
+                    $('.information').fadeOut('slow');
+                },2000)
+            })
 		})
 	})
 </script>

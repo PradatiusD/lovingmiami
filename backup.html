@@ -22,7 +22,7 @@
 	<section class="row">
 		<div class="small-12 large-centered columns celebration projector">
 			<img class="logo" src="img/loving-miami-logo.png" alt="">
-			<h1>Check out what others are also posting on instagram with the hashtag #lovingdaymia and #mixedinmiami!</h1>
+			<h1>Check out what others are also posting on instagram with the hashtag #lovingdaymia and #mixedinmiami!</h1>		
 		</div>
 	</section>
 	<div class="lovingdayprojector"></div>
@@ -32,11 +32,18 @@
 <script src="js/jquery.instagram.js"></script>
 <script src="js/feed.js"></script>
 <script>
-	jQuery(document).ready(function($){
-		instafeed("lovingdaymia", ".lovingdayprojector", 400, 30);
-		// Alternate this with mixedinmia feed
-		setTimeout(function(){
-			instafeed("mixedinmiami", ".lovingdayprojector", 400, 30);
-		},15000)
-	})
+    jQuery(document).ready(function($){
+        $(".lovingdayprojector").instagram({
+            hash: 'lovingdaymia', 
+            clientId: 'fc195c47de4b4f57a069e632e6ef96b8',
+            show : 48,
+            image_size : 'standard_resolution'
+        });
+        $(".lovingdayprojector").instagram({
+            hash: 'mixedinmiami', 
+            clientId: 'fc195c47de4b4f57a069e632e6ef96b8',
+            show : 48,
+            image_size : 'standard_resolution'
+        });
+    })
 </script>
